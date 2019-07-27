@@ -1,0 +1,25 @@
+.Control {
+    padding: 32px;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    margin-top: 32px;
+    box-shadow: 0 8px 8px rgba(202, 197, 197, 0.747);
+    border: 1px solid gray;
+    cursor: pointer;
+    
+}
+
+.Logo{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.Text{
+    margin:auto;
+    text-align: center;
+    
+}

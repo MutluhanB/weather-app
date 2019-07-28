@@ -1,0 +1,12 @@
+.WeatherBox{
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 16px;
+    height: 90px;
+    width: 50%;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px gray;
+}

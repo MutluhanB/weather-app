@@ -13,7 +13,7 @@ const modal = (props) => {
                     transform: props.show ? 'translateY(0)' : 'translateY(-50ch)'
                 }
             }>
-                <input placeholder="City Name" onChange ={props.onInput}></input>
+                <input placeholder="City Name" onChange ={props.onInput} value={props.value}></input>
                 
                 {props.children}
             </div>

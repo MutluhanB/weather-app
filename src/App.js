@@ -22,26 +22,33 @@ class App extends Component {
   toggleAddingMode() {
     console.log("clicked")
     this.setState(prevState =>(
-      {isAddingCity: !prevState.isAddingCity}
+      {isAddingCity: !prevState.isAddingCity,
+      input:''}
     ))
 
   }
 
-  onInput = (e) => this.setState({input: e.target.value})
+  onInput = (e) => {
+    this.setState({input: e.target.value})
+    
+    
+  }
 
-  onAdd = () => {
+  onAdd = (e) => {
     let tempCities = [...this.state.cities];
     tempCities.push(this.state.input);
-    this.setState({cities:tempCities})
+    this.setState({cities:tempCities, input:''})
     this.toggleAddingMode()
+    
+    
   }
   render() {
-
+   
       
       return (
         <React.Fragment>
           <Toolbar/>
-          <Modal show={this.state.isAddingCity} onInput = {this.onInput}>
+          <Modal show={this.state.isAddingCity} onInput = {this.onInput} value={this.state.input}>
                 <button onClick={this.onAdd}>Add</button>
                 <button onClick={this.toggleAddingMode}>Cancel</button>
 

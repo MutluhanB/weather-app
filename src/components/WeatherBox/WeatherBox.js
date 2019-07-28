@@ -6,6 +6,7 @@ class WeatherBox extends Component{
     state = {
         description: null,
         tempature: null,
+        cityName: null,
     }
     componentDidMount(){
         const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?q='
@@ -14,19 +15,20 @@ class WeatherBox extends Component{
         axios.get(BASE_URL+this.props.city+APP_ID).then(response => {
             const fetchedData = response.data;
             const descr = fetchedData.weather["0"].main
-            const tempDirty = fetchedData.main.temp;
-            const temp = (tempDirty / 10).toFixed(2)
-            this.setState({description: descr, tempature:temp})
+            const tempKelvin = fetchedData.main.temp;
+            const tempCelcius = (tempKelvin - 273.15).toFixed(1);
+            const name = fetchedData.name;
+            this.setState({description: descr, tempature:tempCelcius, cityName:name});
         })
     }
     render(){
             return(
                 <div className = {styles.WeatherBox}>
                     <div>
-                    {this.props.city}
+                    {this.state.cityName}
                     </div>
                     <div>{this.state.description}</div>
-                    <div>{this.state.tempature}</div>
+                    <div>{this.state.tempature} °C</div>
                 
             </div>
         )

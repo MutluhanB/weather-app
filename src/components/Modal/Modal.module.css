@@ -1,10 +1,23 @@
+@media (max-width: 760px) {
+    
+    .Modal { 
+        margin:auto;
+        flex-flow: column;
+        width: 70%;
+        right: 20%;
+        left: 20%;
+    }
+    
+}
+
 .Modal {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: fixed;
     margin:auto;
-    left: 42%;
+    left: 40%;
+    right: 40%;
     top: 30%;
     z-index: 100;
     background-color: white;

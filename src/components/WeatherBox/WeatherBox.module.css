@@ -15,12 +15,12 @@
 }
 
 .WeatherBox:hover{
-    transform: scale(1.04);
+    transform: scale(1.01);
 }
 
 .cityName {
     font-size: 32px;   
-    padding-right: 16px;
+    padding: 16px;
 }
 
 .tempature {

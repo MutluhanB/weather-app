@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       isAddingCity: false,
       input: '',
-      cities: [],
+      cities: ["Ankara"],
     }
     this.toggleAddingMode = this.toggleAddingMode.bind(this);
   }
@@ -61,7 +61,7 @@ class App extends Component {
         <React.Fragment>
           <Toolbar/>
           <Modal show={this.state.isAddingCity} onInput = {this.onInput} value={this.state.input}>
-                <button style={buttonStyle} onClick={this.onAdd}>Add City</button>
+                <button style={buttonStyle}  onClick={this.onAdd}>Add City</button>
                 <button style={buttonStyle} onClick={this.toggleAddingMode}>Cancel</button>
 
           </Modal>

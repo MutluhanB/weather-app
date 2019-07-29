@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './WeatherBox.module.css';
 import axios from 'axios';
-import logo from '../../'
+
 
 class WeatherBox extends Component{
     state = {

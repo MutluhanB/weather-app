@@ -6,7 +6,7 @@
     padding: 0px 16px;
     top: 0;
     left: 0;
-    height: 80px;
+    height: 100px;
     width: 100%;
     background-color:rgb(120, 203, 236);
     text-decoration-color: white;
@@ -14,4 +14,15 @@
 
 .Toolbar div {
     color: white;
+}
+
+.source{
+    display: flex;
+    flex-flow: column;
+    height: 80px;
+    padding-bottom: 6px;
+}
+
+.image {
+    width: %80;
 }

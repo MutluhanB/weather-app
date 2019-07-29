@@ -33,10 +33,13 @@ class App extends Component {
   }
 
   onAdd = (e) => {
-    let tempCities = [...this.state.cities];
-    tempCities.push(this.state.input);
-    this.setState({cities:tempCities, input:''})
-    this.toggleAddingMode()
+    if(this.state.input !== ''){
+
+      let tempCities = [...this.state.cities];
+      tempCities.push(this.state.input);
+      this.setState({cities:tempCities, input:''})
+      this.toggleAddingMode()
+    }
     
     
   }
@@ -50,6 +53,7 @@ class App extends Component {
         width: "40%",
         height: "10%",
         cursor: "pointer"
+        
 
 
       }
@@ -62,7 +66,7 @@ class App extends Component {
 
           </Modal>
           {
-            this.state.cities.map(city => (<WeatherBox city={city}/>))
+            this.state.cities.map(city => (<WeatherBox key={city} city={city}/>))
           }
           <Control clicked={this.toggleAddingMode}/>
           

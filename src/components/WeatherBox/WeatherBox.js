@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './WeatherBox.module.css';
 import axios from 'axios';
+import logo from '../../'
 
 class WeatherBox extends Component{
     state = {
@@ -19,18 +20,31 @@ class WeatherBox extends Component{
             const tempCelcius = (tempKelvin - 273.15).toFixed(1);
             const name = fetchedData.name;
             this.setState({description: descr, tempature:tempCelcius, cityName:name});
+
         })
     }
+
+   
     render(){
+        if (this.state.description === null){
+            this.setState({description:"Loading"})
+        }
+        const iconPath = "assets/weather/"+this.state.description+".png";
+        console.log(iconPath);
             return(
                 <div className = {styles.WeatherBox}>
-                    <div>
-                    {this.state.cityName}
+                     <div className = {styles.cityName}>{this.state.cityName}</div>
+                    <div className = {styles.description}>{this.state.description}
+                        <div className = {styles.icon}>
+                            <img src={iconPath}></img>
+                        </div>
                     </div>
-                    <div>{this.state.description}</div>
-                    <div>{this.state.tempature} °C</div>
+                        
+                    
+                    <div className={styles.tempature}>{this.state.tempature} °C</div>
+                </div>
                 
-            </div>
+            
         )
     }
 

@@ -13,3 +13,23 @@
     border-radius: 10   px;
     border: 1px solid rgb(120, 203, 236);
 }
+
+.WeatherBox:hover{
+    transform: scale(1.04);
+}
+
+.cityName {
+    font-size: 32px;   
+    padding-right: 16px;
+}
+
+.tempature {
+    font-size: 32px;
+}
+
+.icon {
+    transform: scale(1.5);
+    padding-top: 18px;
+    
+}
+

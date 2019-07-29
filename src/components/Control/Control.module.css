@@ -18,24 +18,39 @@
 
 .Control:hover {
     background-color: rgba(179, 179, 179, 0.2);
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 500px) {
+   
+    .Control {
+        padding: 32px;
+        width: 60%;
+        margin: auto;
+        margin-top: 32px;
+        box-shadow: 0 8px 8px rgba(202, 197, 197, 0.747);
+        border: 2px solid rgb(0, 203, 236);
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        box-sizing: border-box;
+        border-radius: 20%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
 
 
 
 .Logo{
-    display: fl%ex;
+    margin: auto;
     box-sizing: border-box;
     max-width:70%;
-    height:auto;
     
     
 }
 
 
-
-.Text{
-    margin:auto;
-    text-align: center;
-    margin-top: 24px
-    
-}

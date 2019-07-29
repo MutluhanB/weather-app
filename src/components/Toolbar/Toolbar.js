@@ -7,7 +7,7 @@ const toolbar = (props) => {
 
         <header className={styles.Toolbar}>
             <div>Logo</div>
-            <div>Search</div>
+            <div>Weather App React.js Demo</div>
             <div>Button</div>
             
             

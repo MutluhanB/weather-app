@@ -8,5 +8,10 @@
     left: 0;
     height: 80px;
     width: 100%;
-    background-color: #1981e3;
+    background-color:rgb(120, 203, 236);
+    text-decoration-color: white;
+}
+
+.Toolbar div {
+    color: white;
 }

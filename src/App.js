@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
-import api from './api/api';
 import Control from './components/Control/Control';
 import Modal from './components/Modal/Modal';
-import Backdrop from './components/Backdrop/Backdrop';
 import WeatherBox from './components/WeatherBox/WeatherBox';
 
 class App extends Component {
@@ -44,13 +42,23 @@ class App extends Component {
   }
   render() {
    
-      
+      var buttonStyle = {
+        margin:"auto",
+        backgroundColor: "white",
+        border: "1px solid rgb(120, 203, 236)",
+        padding: "16px",
+        width: "40%",
+        height: "10%",
+        cursor: "pointer"
+
+
+      }
       return (
         <React.Fragment>
           <Toolbar/>
           <Modal show={this.state.isAddingCity} onInput = {this.onInput} value={this.state.input}>
-                <button onClick={this.onAdd}>Add</button>
-                <button onClick={this.toggleAddingMode}>Cancel</button>
+                <button style={buttonStyle} onClick={this.onAdd}>Add City</button>
+                <button style={buttonStyle} onClick={this.toggleAddingMode}>Cancel</button>
 
           </Modal>
           {

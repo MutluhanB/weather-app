@@ -10,10 +10,7 @@ const toolbar = (props) => {
         <header className={styles.Toolbar}>
             <div><img className={styles.logo} src = {"assets/logo.png"} alt="logo not found"></img></div>
             <div className={styles.text}>Weather App </div>
-            <a href ="http://www.google.com">
-
-
-
+            <a href ="https://github.com/MutluhanB/weather-app">
             <div className={styles.source} h>
                 <img className = {styles.github} src={"assets/github.png"} alt="github icon not found"></img>
                 <div style={{

@@ -22,11 +22,11 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
    
     .Control {
         padding: 32px;
-        width: 60%;
+        width: 55%;
         margin: auto;
         margin-top: 32px;
         box-shadow: 0 8px 8px rgba(202, 197, 197, 0.747);

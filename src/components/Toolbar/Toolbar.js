@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Toolbar.module.css'
+import { forInStatement } from '@babel/types';
 
 const toolbar = (props) => {
 
@@ -7,12 +8,19 @@ const toolbar = (props) => {
     <React.Fragment>
 
         <header className={styles.Toolbar}>
-            <div><img src = {"assets/logo.png"}></img></div>
-            <div>Weather App React.js Demo</div>
-            <div className={styles.source}>Source Code
-                <img className = {styles.image} src={"assets/github.png"}></img>
+            <div><img className={styles.logo} src = {"assets/logo.png"} alt="logo not found"></img></div>
+            <div className={styles.text}>Weather App </div>
+            <a href ="http://www.google.com">
 
+
+
+            <div className={styles.source} h>
+                <img className = {styles.github} src={"assets/github.png"} alt="github icon not found"></img>
+                <div style={{
+                    fontSize:"18px"}}
+                    >Source Code</div>
             </div>
+            </a>
             
             
         </header>

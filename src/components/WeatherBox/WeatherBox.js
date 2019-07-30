@@ -36,7 +36,7 @@ class WeatherBox extends Component{
                      <div className = {styles.cityName}>{this.state.cityName}</div>
                     <div className = {styles.description}>{this.state.description}
                         <div className = {styles.icon}>
-                            <img src={iconPath}></img>
+                            <img src={iconPath} alt="unknown weather status icon not found"></img>
                         </div>
                     </div>
                         

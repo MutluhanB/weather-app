@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Toolbar.module.css'
-import { forInStatement } from '@babel/types';
 
 const toolbar = (props) => {
 
@@ -11,7 +10,7 @@ const toolbar = (props) => {
             <div><img className={styles.logo} src = {"assets/logo.png"} alt="logo not found"></img></div>
             <div className={styles.text}>Weather App </div>
             <a href ="https://github.com/MutluhanB/weather-app">
-            <div className={styles.source} h>
+            <div className={styles.source}>
                 <img className = {styles.github} src={"assets/github.png"} alt="github icon not found"></img>
                 <div style={{
                     fontSize:"18px"}}

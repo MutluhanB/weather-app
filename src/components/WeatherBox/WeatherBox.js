@@ -10,9 +10,8 @@ class WeatherBox extends Component{
         cityName: null,
     }
     componentDidMount(){
-        const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?q='
+        const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?q='
         const APP_ID = '&APPID=bfcfa473b679b91c8b68fadde8a394a9'
-        console.log("wb cmpdidmnt " + this.props.city);
         axios.get(BASE_URL+this.props.city+APP_ID).then(response => {
             const fetchedData = response.data;
             const descr = fetchedData.weather["0"].main
@@ -30,9 +29,9 @@ class WeatherBox extends Component{
             this.setState({description:"Loading"})
         }
         const iconPath = "assets/weather/"+this.state.description+".png";
-        console.log(iconPath);
             return(
-                <div className = {styles.WeatherBox}>
+  
+                <div className = {styles.WeatherBox} onClick={this.props.onClick}>
                      <div className = {styles.cityName}>{this.state.cityName}</div>
                     <div className = {styles.description}>{this.state.description}
                         <div className = {styles.icon}>
@@ -43,6 +42,7 @@ class WeatherBox extends Component{
                     
                     <div className={styles.tempature}>{this.state.tempature} °C</div>
                 </div>
+                
                 
             
         )

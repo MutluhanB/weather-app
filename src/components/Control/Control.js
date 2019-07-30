@@ -3,7 +3,6 @@ import styles from './Control.module.css';
 
 
 const control = (props) => {
-    console.log("props clicked" )
     return(
         <div className = {styles.Control} onClick={props.clicked}>
 

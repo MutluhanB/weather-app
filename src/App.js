@@ -18,7 +18,6 @@ class App extends Component {
 
 
   toggleAddingMode() {
-    console.log("clicked")
     this.setState(prevState =>(
       {isAddingCity: !prevState.isAddingCity,
       input:''}
@@ -41,6 +40,14 @@ class App extends Component {
       this.toggleAddingMode()
     }
     
+    
+  }
+
+  onRemove = (city) => {
+    console.log(city);
+    let cities = this.state.cities;
+    let citiesRemoved = cities.filter(c=> c!== city)
+    this.setState({cities:citiesRemoved});
     
   }
   render() {
@@ -66,8 +73,9 @@ class App extends Component {
 
           </Modal>
           {
-            this.state.cities.map(city => (<WeatherBox key={city} city={city}/>))
+            this.state.cities.map(city => (<WeatherBox key={city} city={city} onClick = {()=> this.onRemove(city)}/>))
           }
+          
           <Control clicked={this.toggleAddingMode}/>
           
       </React.Fragment>
